@@ -9,15 +9,21 @@
         <ul class="nav">
             <li class="{{ $elementActive == 'dashboard' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'dashboard') }}">
-                    <i class="nc-icon nc-bank"></i>
+                    <i class="nc-icon nc-layout-11"></i>
                     <p>{{ __('Dashboard') }}</p>
+                </a>
+            </li>
+            <li class="{{ $elementActive == 'tables' ? 'active' : '' }}">
+                <a href="{{ route('page.index', 'tables') }}">
+                    <i class="nc-icon nc-tile-56"></i>
+                    <p>{{ __('Property') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'user' || $elementActive == 'profile' ? 'active' : '' }}">
                 <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples">
-                    <i class="nc-icon"><img src="{{ asset('paper/img/laravel.svg') }}"></i>
+                <i class="nc-icon nc-bank"></i>
                     <p>
-                            {{ __('Laravel examples') }}
+                            {{ __('Users') }}
                         <b class="caret"></b>
                     </p>
                 </a>
@@ -54,12 +60,6 @@
                 <a href="{{ route('page.index', 'notifications') }}">
                     <i class="nc-icon nc-bell-55"></i>
                     <p>{{ __('Notifications') }}</p>
-                </a>
-            </li>
-            <li class="{{ $elementActive == 'tables' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'tables') }}">
-                    <i class="nc-icon nc-tile-56"></i>
-                    <p>{{ __('Table List') }}</p>
                 </a>
             </li>
             <li class="{{ $elementActive == 'typography' ? 'active' : '' }}">

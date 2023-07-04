@@ -84,6 +84,36 @@
         sidebar_mini_active = true;
         window_width = $(window).width();
         fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        // Data Table
+        var table = $('#example').DataTable();
+ 
+        $('#example tbody').on('mouseenter', 'td', function () {
+            var colIdx = table.cell(this).index().column;
+        
+            $(table.cells().nodes()).removeClass('highlight');
+            $(table.column(colIdx).nodes()).addClass('highlight');
+        });
+        $('#example tbody').on('click', 'tr', function () {
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+        });
+        
+        $('#button').click(function () {
+            table.row('.selected').remove().draw(false);
+        });
+
+
+        
+
+        //
+
+
         // if( window_width > 767 && fixed_plugin_open == 'Dashboard' ){
         //     if($('.fixed-plugin .dropdown').hasClass('show-dropdown')){
         //         $('.fixed-plugin .dropdown').addClass('show');
