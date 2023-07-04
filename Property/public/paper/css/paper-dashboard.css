@@ -6854,3 +6854,14 @@ License - nucleoapp.com/license/
             transform: scale(0.75); } }
 
 /*# sourceMappingURL=dashboard-free.css.map */
+
+
+/* Data Table */
+td.highlight {
+  background-color: whitesmoke !important;
+}
+
+html.dark td.highlight {
+  background-color: rgba(var(--dt-row-hover), 0.082) !important;
+}
+/* Data Table */
